@@ -1,0 +1,25 @@
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Datos con PII
+*.csv
+*.xlsx
+*.xls
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
