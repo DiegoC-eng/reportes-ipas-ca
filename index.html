@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados 2026 - Cierre Semana 11</title>
+    <title>Resultados 2026 - Cierre Semana 14</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background:#f9fafb; }
         @media print {
             .no-print { display: none !important; }
             .page-break { page-break-before: always; }
@@ -19,21 +19,24 @@
         .card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
         .metric-card { transition: transform 0.2s; }
         .metric-card:hover { transform: translateY(-2px); }
+        .table-scroll { max-height: 420px; overflow-y: auto; }
+        thead { position: sticky; top: 0; z-index: 1; }
     </style>
 </head>
 <body class="bg-gray-50">
+
     <!-- Header -->
     <header class="gradient-header text-white py-6 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-start">
                 <div>
-                    <h1 class="text-2xl font-bold">Resultados 2026 - Cierre Semana 11</h1>
+                    <h1 class="text-2xl font-bold">Resultados 2026 - Cierre Semana 14</h1>
                     <h2 class="text-base mt-2 font-bold" style="color: #ffc220;">Total Loss, Shrink, Devolución de Merma</h2>
-                    <p class="text-xs mt-2 text-blue-200 font-bold">Protección de Activos - Centroamérica</p>
+                    <p class="text-xs mt-2 text-blue-200 font-bold">Protección de Activos - Centroamérica &nbsp;|&nbsp; 36 Tiendas</p>
                 </div>
                 <a href="https://app.powerbi.com/reportEmbed?reportId=10cadfe8-706b-4aa3-a177-db6620371a49&autoAuth=true&ctid=3cbcc3d3-094d-4006-9849-0d11d61f484d"
                    target="_blank"
-                   class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition flex items-center gap-2 text-sm">
+                   class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition flex items-center gap-2 text-sm no-print">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -45,29 +48,30 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-8">
+
         <!-- KPIs -->
         <section class="mb-8">
             <h3 class="text-lg font-semibold text-gray-700 mb-4">Indicadores Clave de Desempeño</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="metric-card bg-white rounded-xl p-5 card border-l-4 border-blue-500">
                     <p class="text-sm text-gray-500">Total Tiendas</p>
-                    <p class="text-3xl font-bold text-gray-800">5</p>
+                    <p class="text-3xl font-bold text-gray-800">36</p>
                     <p class="text-xs text-gray-400 mt-1">Analizadas</p>
                 </div>
                 <div class="metric-card bg-white rounded-xl p-5 card border-l-4 border-green-500">
                     <p class="text-sm text-gray-500">En Logro</p>
-                    <p class="text-3xl font-bold text-green-600">0</p>
-                    <p class="text-xs text-green-500 mt-1">0.0% del total</p>
+                    <p class="text-3xl font-bold text-green-600">14</p>
+                    <p class="text-xs text-green-500 mt-1">38.9% del total</p>
                 </div>
                 <div class="metric-card bg-white rounded-xl p-5 card border-l-4 border-red-500">
                     <p class="text-sm text-gray-500">Fuera de Logro</p>
-                    <p class="text-3xl font-bold text-red-600">5</p>
-                    <p class="text-xs text-red-500 mt-1">100.0% del total</p>
+                    <p class="text-3xl font-bold text-red-600">22</p>
+                    <p class="text-xs text-red-500 mt-1">61.1% del total</p>
                 </div>
                 <div class="metric-card bg-white rounded-xl p-5 card border-l-4 border-purple-500">
                     <p class="text-sm text-gray-500">Tiendas Alta Merma</p>
-                    <p class="text-3xl font-bold text-purple-600">2</p>
-                    <p class="text-xs mt-1" style="color: #dc2626">+1 vs LY</p>
+                    <p class="text-3xl font-bold text-purple-600">5</p>
+                    <p class="text-xs mt-1 text-green-600 font-semibold">-2 vs LY</p>
                 </div>
             </div>
         </section>
@@ -78,37 +82,41 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="rounded-xl p-6 card" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss</p>
-                    <p class="text-3xl font-bold mt-2 text-center" style="color: #ea1100;">-$339,152</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #ea1100;">-$3,840,699</p>
                     <p class="text-sm mt-2 text-center" style="color: #8a7530;">
-                        -1.38% TY &nbsp; -0.94% LY &nbsp; Alcance 75%</p>
-                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Abril</p>
+                        -1.10% TY &nbsp; -1.19% LY &nbsp; Alcance 111%</p>
+                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Mayo</p>
                     <p class="text-center font-bold" style="color: #7a6520; font-size:10px;">
-                        $339,152 &nbsp; -1.38% TY &nbsp; -0.94% LY &nbsp; Alcance 75%</p>
+                        -$3,840,699 &nbsp; -1.10% TY &nbsp; -1.19% LY &nbsp; Alcance 111%</p>
                 </div>
                 <div class="rounded-xl p-6 card" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Shrink</p>
-                    <p class="text-3xl font-bold mt-2 text-center" style="color: #ea1100;">-$223,607</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #ea1100;">-$2,329,650</p>
                     <p class="text-sm mt-2 text-center" style="color: #8a7530;">
-                        -0.91% TY &nbsp; -0.65% LY &nbsp; Alcance 71%</p>
-                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Abril</p>
+                        -0.67% TY &nbsp; -0.82% LY &nbsp; Alcance 120%</p>
+                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Mayo</p>
                     <p class="text-center font-bold" style="color: #7a6520; font-size:10px;">
-                        $223,607 &nbsp; -0.91% TY &nbsp; -0.65% LY &nbsp; Alcance 71%</p>
+                        -$2,329,650 &nbsp; -0.67% TY &nbsp; -0.82% LY &nbsp; Alcance 120%</p>
                 </div>
                 <div class="rounded-xl p-6 card" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Devolución Merma</p>
-                    <p class="text-3xl font-bold mt-2 text-center" style="color: #ea1100;">-$6,076</p>
-                    <p class="text-sm mt-2 text-center" style="color: #8a7530;">$66,865 LY</p>
-                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Abril</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">$661,708</p>
+                    <p class="text-sm mt-2 text-center" style="color: #8a7530;">-$68,295 LY</p>
+                    <p class="mt-3 text-center font-bold" style="color: #7a6520; font-size:11px;">Acumulado - Mes Mayo</p>
                     <p class="text-center font-bold" style="color: #7a6520; font-size:10px;">
-                        -$6,076 TY &nbsp; $66,865 LY</p>
+                        $661,708 TY &nbsp; -$68,295 LY</p>
                 </div>
             </div>
         </section>
 
         <!-- Tiendas en Logro -->
         <section class="mb-8 page-break">
-            <h3 class="text-lg font-semibold text-gray-700 mb-4">Tiendas en Logro</h3>
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                Tiendas en Logro
+                <span class="text-sm font-normal text-green-600 ml-2">14 tiendas</span>
+            </h3>
             <div class="bg-white rounded-xl card overflow-hidden">
+                <div class="table-scroll">
                 <table class="w-full" style="font-size:11px;">
                     <thead class="bg-green-600 text-white">
                         <tr>
@@ -122,16 +130,146 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="7" class="px-4 py-6 text-center text-gray-400 italic">Sin tiendas en logro para Semana 11</td></tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">1046-WM SANTA ANA<span class="ml-1 px-1 py-0 rounded text-gray-500 font-normal" style="font-size:8px;background:#f3f4f6;">Sin LY</span></td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">LIONER CALVO CORDERO</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Walmart</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.58% </td>
+    <td class="px-2 py-2 text-right">0.31% </td>
+    <td class="px-2 py-2 text-right text-green-600">$332,571</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4375-DF AZACUALPA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MIRNA YANETH BAIDE QUINTANILLA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.45% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 309 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.04% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 328 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$57,648</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4034-PALI SAN JUDAS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">HUGO RICARDO RIVERA MARTINEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Nicaragua</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.21% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 63 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.79% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 74 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$28,680</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">47-PAIZ MONTBLANC</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MARVIN ANIBAL REYES GIRON</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">Supermercado</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.89% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 88 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.56% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 95 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$56,950</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">460-WM XELA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">ELMER ESTUARDO GARCIA VALENZUELA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Walmart</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.73% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 35 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.52% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 21 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$65,093</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4402-MP HATILLO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">SEILYN AGUILAR PEREIRA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.31% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 45 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.76% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 39 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$49,787</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4195-MP CAÑAS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">LEIDY MARIAM CALVO HERNANDEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.86% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 24 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.53% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 8 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$31,346</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">389-MD CHIMALTENANGO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">ISLIAN ANDREA DIAZ AMEZQUITA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.54% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 15 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.29% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 12 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$20,561</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4343-MD ZONA 3 COBAN</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MARLON FABRINCI MENDEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.52% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 11 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.40% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 12 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$17,494</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4109-MP NICOYA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MIGUEL ANGEL RAMIREZ MATA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.45% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 30 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.96% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 38 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$60,252</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4371-MD COATEPEQUE</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">GUSTAVO ADOLFO JORDAN CASASOLA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.52% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 11 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.33% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 5 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$9,300</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">816-MD CAMPOS VERDES</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">GALO CESAR RAMIREZ GONZALEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">El Salvador</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-0.53% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 8 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.28% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 9 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$14,138</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4228-DF COLOMBA QUETZALTENANGO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">GUSTAVO ADOLFO JORDAN CASASOLA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.16% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 27 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.96% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 19 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$4,543</td>
+</tr>
+<tr class="border-b hover:bg-green-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4471-PALI CARRILLOS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">KATHERINE OREAMUNO MURILLO</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold text-green-700">-1.38% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 8 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.86% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 1 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$6,984</td>
+</tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
 
         <!-- Tiendas Fuera de Logro -->
         <section class="mb-8">
-            <h3 class="text-lg font-semibold text-gray-700 mb-4">Tiendas Fuera de Logro (Requieren Atención)</h3>
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                Tiendas Fuera de Logro (Requieren Atención)
+                <span class="text-sm font-normal text-red-600 ml-2">22 tiendas</span>
+            </h3>
             <div class="bg-white rounded-xl card overflow-hidden">
+                <div class="table-scroll">
                 <table class="w-full" style="font-size:11px;">
                     <thead class="bg-red-600 text-white">
                         <tr>
@@ -139,73 +277,227 @@
                             <th class="px-2 py-2 text-left">Distrital Ops</th>
                             <th class="px-2 py-2 text-center">Formato</th>
                             <th class="px-2 py-2 text-center">País</th>
-                            <th class="px-2 py-2 text-right">Total Loss %</th>
+                            <th class="px-2 py-2 text-right">Total Loss % <span class="font-normal text-red-200" style="font-size:9px;">(peores primero)</span></th>
                             <th class="px-2 py-2 text-right">Shrink %</th>
                             <th class="px-2 py-2 text-right">Dev. Merma</th>
                         </tr>
                     </thead>
                     <tbody>
-<tr class="border-b hover:bg-red-50">
-    <td class="px-2 py-2 font-medium">4143-PALI NUEVA GUINEA</td>
-    <td class="px-2 py-2">DENISSE DANIELKA ALDANA SOTELO</td>
-    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">Descuentos</span></td>
-    <td class="px-2 py-2 text-center">Nicaragua</td>
-    <td class="px-2 py-2 text-right font-semibold">-1.88% <span class="text-red-600 font-bold" style="font-size:9px;">crece 25 bps</span></td>
-    <td class="px-2 py-2 text-right">-1.45% <span class="text-red-600 font-bold" style="font-size:9px;">crece 4 bps</span></td>
-    <td class="px-2 py-2 text-right text-red-600">-$4,772</td>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4230-PALI GRANADILLA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">OSCAR EMILIO MONTERO RUIZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-2.50% <span class="text-red-600 font-bold" style="font-size:9px;">crece 77 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.64% <span class="text-red-600 font-bold" style="font-size:9px;">crece 66 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$3,883</td>
 </tr>
-<tr class="border-b hover:bg-red-50">
-    <td class="px-2 py-2 font-medium">2032-PALI LEON</td>
-    <td class="px-2 py-2">MANUEL DE JESUS SALAZAR</td>
-    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">Descuentos</span></td>
-    <td class="px-2 py-2 text-center">Nicaragua</td>
-    <td class="px-2 py-2 text-right font-semibold">-1.07% <span class="text-red-600 font-bold" style="font-size:9px;">crece 42 bps</span></td>
-    <td class="px-2 py-2 text-right">-0.68% <span class="text-red-600 font-bold" style="font-size:9px;">crece 27 bps</span></td>
-    <td class="px-2 py-2 text-right text-red-600">-$260</td>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">3125-PALI ATENAS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MARCO ANTONIO CHAVES RODRIGUEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.90% <span class="text-red-600 font-bold" style="font-size:9px;">crece 59 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.52% <span class="text-red-600 font-bold" style="font-size:9px;">crece 62 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$3,166</td>
 </tr>
-<tr class="border-b hover:bg-red-50">
-    <td class="px-2 py-2 font-medium">4210-PALI EL RAMA</td>
-    <td class="px-2 py-2">DENISSE DANIELKA ALDANA SOTELO</td>
-    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">Descuentos</span></td>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4394-LU ESQUIPULAS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">CRISTHIAM JAVIER CASAYA ARANA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">Supermercado</span></td>
     <td class="px-2 py-2 text-center">Nicaragua</td>
-    <td class="px-2 py-2 text-right font-semibold">-1.21% <span class="text-red-600 font-bold" style="font-size:9px;">crece 45 bps</span></td>
-    <td class="px-2 py-2 text-right">-0.58% <span class="text-red-600 font-bold" style="font-size:9px;">crece 13 bps</span></td>
-    <td class="px-2 py-2 text-right text-green-600">$3,252</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.74% <span class="text-red-600 font-bold" style="font-size:9px;">crece 110 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.69% <span class="text-red-600 font-bold" style="font-size:9px;">crece 41 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$6,043</td>
 </tr>
-<tr class="border-b hover:bg-red-50">
-    <td class="px-2 py-2 font-medium">4212-PALI SANTO TOMAS</td>
-    <td class="px-2 py-2">DENISSE DANIELKA ALDANA SOTELO</td>
-    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">Descuentos</span></td>
-    <td class="px-2 py-2 text-center">Nicaragua</td>
-    <td class="px-2 py-2 text-right font-semibold">-0.74% <span class="text-red-600 font-bold" style="font-size:9px;">crece 46 bps</span></td>
-    <td class="px-2 py-2 text-right">-0.49% <span class="text-red-600 font-bold" style="font-size:9px;">crece 31 bps</span></td>
-    <td class="px-2 py-2 text-right text-green-600">$7,928</td>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4399-DF COJUTEPEQUE</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">CARLOS ALBERTO MATA MADRID</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">El Salvador</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.57% <span class="text-red-600 font-bold" style="font-size:9px;">crece 28 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.50% <span class="text-red-600 font-bold" style="font-size:9px;">crece 29 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$12,949</td>
 </tr>
-<tr class="border-b hover:bg-red-50">
-    <td class="px-2 py-2 font-medium">4156-PALI SUBTIAVA</td>
-    <td class="px-2 py-2">MANUEL DE JESUS SALAZAR</td>
-    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">Descuentos</span></td>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">789-DF LAS VEGAS</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">CLAUDIA LIZZETH MARTINEZ SABILLON</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.89% <span class="text-red-600 font-bold" style="font-size:9px;">crece 28 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.45% <span class="text-red-600 font-bold" style="font-size:9px;">crece 23 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$826</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">3905-MP LIBERIA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">LEIDY MARIAM CALVO HERNANDEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.70% <span class="text-red-600 font-bold" style="font-size:9px;">crece 41 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.35% <span class="text-red-600 font-bold" style="font-size:9px;">crece 37 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$57,319</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">3041-MXM ALAJUELA CENTRO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">WARREN GERARDO ANGULO SALAZAR</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">Supermercado</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-2.71% <span class="text-red-600 font-bold" style="font-size:9px;">crece 70 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.53% <span class="text-red-600 font-bold" style="font-size:9px;">crece 57 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$7,975</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">980-PALI EL PORO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">KATHERINE OREAMUNO MURILLO</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.77% <span class="text-red-600 font-bold" style="font-size:9px;">crece 36 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.12% <span class="text-red-600 font-bold" style="font-size:9px;">crece 35 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$9,542</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4274-MP WASPAN</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">ALICIA GABRIELA GARCIA MORAGA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
     <td class="px-2 py-2 text-center">Nicaragua</td>
-    <td class="px-2 py-2 text-right font-semibold">-2.13% <span class="text-red-600 font-bold" style="font-size:9px;">crece 82 bps</span></td>
-    <td class="px-2 py-2 text-right">-1.38% <span class="text-red-600 font-bold" style="font-size:9px;">crece 68 bps</span></td>
-    <td class="px-2 py-2 text-right text-red-600">-$12,224</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.98% <span class="text-red-600 font-bold" style="font-size:9px;">crece 33 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.61% <span class="text-red-600 font-bold" style="font-size:9px;">crece 18 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$7,252</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4304-MP SANTA CRUZ</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">MIGUEL ANGEL RAMIREZ MATA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-2.12% <span class="text-red-600 font-bold" style="font-size:9px;">crece 34 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.49% <span class="text-red-600 font-bold" style="font-size:9px;">crece 29 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$24,438</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4193-PALI MONTES DE OCA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">OSCAR EMILIO MONTERO RUIZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-2.70% <span class="text-red-600 font-bold" style="font-size:9px;">crece 40 bps</span></td>
+    <td class="px-2 py-2 text-right">-2.05% <span class="text-red-600 font-bold" style="font-size:9px;">crece 25 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$4,738</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">805-PALI LOGIX PLAZA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">ALICIA GABRIELA GARCIA MORAGA</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Nicaragua</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.84% <span class="text-red-600 font-bold" style="font-size:9px;">crece 58 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.82% <span class="text-red-600 font-bold" style="font-size:9px;">crece 13 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$4,838</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">572-DDJ HOLANDA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">SUSAN MICHELLE GARCIA DE POSADAS</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">Supermercado</span></td>
+    <td class="px-2 py-2 text-center">El Salvador</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.91% <span class="text-red-600 font-bold" style="font-size:9px;">crece 10 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.60% <span class="text-red-600 font-bold" style="font-size:9px;">crece 16 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$3,172</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4306-MD JUTICALPA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">JOSE NARCISO AVILA LOPEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.61% <span class="text-red-600 font-bold" style="font-size:9px;">crece 20 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.29% <span class="text-red-600 font-bold" style="font-size:9px;">crece 8 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$9,405</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4355-DF SAN MANUEL</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">CLAUDIA LIZZETH MARTINEZ SABILLON</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.72% <span class="text-red-600 font-bold" style="font-size:9px;">crece 3 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.43% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 6 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$2,773</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4278-DF GUAIMACA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">JOSE NARCISO AVILA LOPEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.78% <span class="text-red-600 font-bold" style="font-size:9px;">crece 2 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.38% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 9 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$3,448</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">536-DF CHALCHUAPA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">ROCIO NATALIA VASQUEZ RODRIGUEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">El Salvador</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.65% <span class="text-red-600 font-bold" style="font-size:9px;">crece 8 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.55% <span class="text-red-600 font-bold" style="font-size:9px;">crece 13 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$7,390</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4502-PALI LOMA LINDA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">HUGO RICARDO RIVERA MARTINEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Nicaragua</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.78% <span class="text-red-600 font-bold" style="font-size:9px;">crece 21 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.02% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 1 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$882</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">733-MP CORONADO</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">CARLOS ALBERTO MARTIN MURILLO</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Costa Rica</td>
+    <td class="px-2 py-2 text-right font-semibold">-1.29% <span class="text-red-600 font-bold" style="font-size:9px;">crece 3 bps</span></td>
+    <td class="px-2 py-2 text-right">-1.03% <span class="text-red-600 font-bold" style="font-size:9px;">crece 14 bps</span></td>
+    <td class="px-2 py-2 text-right text-red-600">-$8,968</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4175-DF TALANGA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">JOSE NARCISO AVILA LOPEZ</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">Honduras</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.49% <span class="text-red-600 font-bold" style="font-size:9px;">crece 4 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.25% <span class="text-red-600 font-bold" style="font-size:9px;">crece 3 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$1,787</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4171-DF NUEVA CONCEPCION</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">BRENDA LISSETH ORELLANA FUENTES</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">Descuentos</span></td>
+    <td class="px-2 py-2 text-center">El Salvador</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.79% </td>
+    <td class="px-2 py-2 text-right">-0.57% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 1 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$7,356</td>
+</tr>
+<tr class="border-b hover:bg-gray-50" style="font-size:10px;">
+    <td class="px-2 py-2 font-medium">4298-MD TRIGALES XELA</td>
+    <td class="px-2 py-2 text-gray-600" style="font-size:9px;">JACQUELINE YAJAIRA JAYEL DE LEON BARRIOS</td>
+    <td class="px-2 py-2 text-center"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Bodegas</span></td>
+    <td class="px-2 py-2 text-center">Guatemala</td>
+    <td class="px-2 py-2 text-right font-semibold">-0.93% <span class="text-green-600 font-bold" style="font-size:9px;">mejora 1 bps</span></td>
+    <td class="px-2 py-2 text-right">-0.52% <span class="text-red-600 font-bold" style="font-size:9px;">crece 3 bps</span></td>
+    <td class="px-2 py-2 text-right text-green-600">$6,795</td>
 </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
 
-        <!-- Graficas barras -->
+        <!-- Gráficas barras -->
         <section class="mb-8 grid md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl p-6 card">
-                <h4 class="font-semibold text-gray-700 mb-4">Total Loss por Formato</h4>
-                <div style="height: 180px;">
+                <h4 class="font-semibold text-gray-700 mb-4">Total Loss % por Formato</h4>
+                <div style="height: 220px;">
                     <canvas id="chartFormato"></canvas>
                 </div>
             </div>
             <div class="bg-white rounded-xl p-6 card">
-                <h4 class="font-semibold text-gray-700 mb-4">Total Loss por País</h4>
-                <div style="height: 180px;">
+                <h4 class="font-semibold text-gray-700 mb-4">Total Loss % por País</h4>
+                <div style="height: 220px;">
                     <canvas id="chartPais"></canvas>
                 </div>
             </div>
@@ -240,27 +532,40 @@
     </main>
 
     <script>
+        Chart.register(ChartDataLabels);
+
+        // Total Loss por Formato
+        const formatoAlcance = [86.5, 94.3, 97.9, 230.6];
+        const paisAlcance    = [112.6, 90.4, 113.1, 126.6, 90.9];
+
         // Total Loss por Formato
         new Chart(document.getElementById('chartFormato'), {
             type: 'bar',
-            plugins: [ChartDataLabels],
             data: {
-                labels: ['Descuentos'],
+                labels: ["Supermercado", "Descuentos", "Bodegas", "Walmart"],
                 datasets: [{
                     label: 'Total Loss %',
-                    data: [1.38],
-                    backgroundColor: ['#0053e2'],
+                    data: [1.48, 1.27, 1.14, 0.65],
+                    backgroundColor: ["#7dd3fc", "#7dd3fc", "#7dd3fc", "#7dd3fc"],
                     borderRadius: 8
                 }]
             },
             options: {
                 responsive: true, maintainAspectRatio: false,
-                layout: { padding: { top: 20 } },
+                layout: { padding: { top: 24 } },
                 plugins: {
                     legend: { display: false },
-                    tooltip: { callbacks: {
-                        afterLabel: () => 'Alcance: 74%'
-                    }},
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const alc = formatoAlcance[ctx.dataIndex];
+                                return [
+                                    'TL %: ' + ctx.parsed.y.toFixed(2) + '%',
+                                    'Alcance: ' + alc + '%'
+                                ];
+                            }
+                        }
+                    },
                     datalabels: {
                         anchor: 'end', align: 'top',
                         color: '#1f2937',
@@ -268,32 +573,38 @@
                         formatter: (v) => v.toFixed(2) + '%'
                     }
                 },
-                scales: { y: { beginAtZero: true, title: { display: true, text: '% Total Loss' },
-                    ticks: { callback: (v) => v + '%' } } }
+                scales: { y: { display: false } }
             }
         });
 
         // Total Loss por País
         new Chart(document.getElementById('chartPais'), {
             type: 'bar',
-            plugins: [ChartDataLabels],
             data: {
-                labels: ['Nicaragua'],
+                labels: ["Costa Rica", "Nicaragua", "Honduras", "Guatemala", "El Salvador"],
                 datasets: [{
                     label: 'Total Loss %',
-                    data: [1.38],
-                    backgroundColor: ['#059669'],
+                    data: [1.4, 1.33, 0.74, 0.71, 0.68],
+                    backgroundColor: ["#86efac", "#86efac", "#86efac", "#86efac", "#86efac"],
                     borderRadius: 8
                 }]
             },
             options: {
                 responsive: true, maintainAspectRatio: false,
-                layout: { padding: { top: 20 } },
+                layout: { padding: { top: 24 } },
                 plugins: {
                     legend: { display: false },
-                    tooltip: { callbacks: {
-                        afterLabel: () => 'Alcance: 74%'
-                    }},
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const alc = paisAlcance[ctx.dataIndex];
+                                return [
+                                    'TL %: ' + ctx.parsed.y.toFixed(2) + '%',
+                                    'Alcance: ' + alc + '%'
+                                ];
+                            }
+                        }
+                    },
                     datalabels: {
                         anchor: 'end', align: 'top',
                         color: '#1f2937',
@@ -301,25 +612,19 @@
                         formatter: (v) => v.toFixed(2) + '%'
                     }
                 },
-                scales: { y: { beginAtZero: true, title: { display: true, text: '% Total Loss' },
-                    ticks: { callback: (v) => v + '%' } } }
+                scales: { y: { display: false } }
             }
         });
 
-        // Participación de Merma: Shrink / TotalLoss  y  Dañado / TotalLoss
-        // Shrink = 223,607 | TotalLoss = 339,152 => Shrink 65.93% | Dañado implícito 34.07%
-        const shrinkMonto = 223607;
-        const danadoMonto = 339152 - 223607; // 115,545
+        // Participación de Merma
         new Chart(document.getElementById('chartComposicion'), {
             type: 'pie',
-            plugins: [ChartDataLabels],
             data: {
                 labels: ['Shrink', 'Dañado'],
                 datasets: [{
-                    data: [shrinkMonto, danadoMonto],
+                    data: [2329650, 1511049],
                     backgroundColor: ['#0053e2', '#f59e0b'],
-                    borderWidth: 2,
-                    borderColor: '#fff'
+                    borderWidth: 2, borderColor: '#fff'
                 }]
             },
             options: {
@@ -340,14 +645,12 @@
         // Shrink por Causa
         new Chart(document.getElementById('chartShrinkCausa'), {
             type: 'pie',
-            plugins: [ChartDataLabels],
             data: {
-                labels: ['Faltantes', 'Hurto', 'Merma Admin.', 'Solo PI'],
+                labels: ["Hurto", "Faltantes", "Merma Admin.", "Solo PI"],
                 datasets: [{
-                    data: [49.61, 41.28, 6.44, 2.77],
-                    backgroundColor: ['#7f1d1d', '#dc2626', '#f87171', '#fecaca'],
-                    borderWidth: 2,
-                    borderColor: '#fff'
+                    data: [62.2, 31.72, 3.38, 2.7],
+                    backgroundColor: ['#7f1d1d','#dc2626','#f87171','#fecaca'],
+                    borderWidth: 2, borderColor: '#fff'
                 }]
             },
             options: {
@@ -366,14 +669,12 @@
         // Dañado por Causa
         new Chart(document.getElementById('chartDanadoCausa'), {
             type: 'pie',
-            plugins: [ChartDataLabels],
             data: {
-                labels: ['Vencimiento', 'Manipulación', 'Otros', 'Calidad', 'Plagas'],
+                labels: ["Vencimiento", "Manipulaci\u00f3n", "Calidad", "Otros", "Plagas"],
                 datasets: [{
-                    data: [28.19, 26.73, 21.66, 16.06, 7.36],
-                    backgroundColor: ['#7c2d12', '#ea580c', '#fb923c', '#fed7aa', '#fef3c7'],
-                    borderWidth: 2,
-                    borderColor: '#fff'
+                    data: [43.38, 33.41, 10.94, 7.08, 5.19],
+                    backgroundColor: ['#7c2d12','#ea580c','#fb923c','#fed7aa','#fef3c7'],
+                    borderWidth: 2, borderColor: '#fff'
                 }]
             },
             options: {
