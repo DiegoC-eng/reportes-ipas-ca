@@ -17,6 +17,9 @@
 .DS_Store
 Thumbs.db
 
+# Backups locales del reporte
+index_*_backup.html
+
 # Python
 __pycache__/
 *.py[cod]
