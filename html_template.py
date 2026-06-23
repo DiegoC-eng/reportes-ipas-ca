@@ -358,7 +358,7 @@ def build_html(n_total, n_logro, n_fuera, alta, alta_ly, w, m,
             data: {{
                 labels: ['Hurto', 'Faltantes', 'Merma Admin.', 'Solo PI'],
                 datasets: [{{
-                    data: [69.35, 14.02, 14.28, 2.36],
+                    data: [72.7, 20.1, 5.2, 2.0],
                     backgroundColor: ['#7f1d1d','#dc2626','#f87171','#fecaca'],
                     borderWidth: 2, borderColor: '#fff'
                 }}]
@@ -383,7 +383,7 @@ def build_html(n_total, n_logro, n_fuera, alta, alta_ly, w, m,
             data: {{
                 labels: ['Vencimiento', 'Manipulación', 'Calidad', 'Otros', 'Plagas'],
                 datasets: [{{
-                    data: [37.93, 39.29, 10.85, 7.92, 4.01],
+                    data: [45.0, 30.0, 5.9, 11.2, 7.9],
                     backgroundColor: ['#7c2d12','#ea580c','#fb923c','#fed7aa','#fef3c7'],
                     borderWidth: 2, borderColor: '#fff'
                 }}]
