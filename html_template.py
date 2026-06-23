@@ -4,7 +4,7 @@ Se separa de generate.py para mantener archivos pequeños y legibles.
 """
 
 MES_NOMBRE = "Junio"
-SEMANA = "19"
+SEMANA = "20"
 
 
 def _money(v):

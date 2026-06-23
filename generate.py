@@ -8,7 +8,7 @@ import csv
 
 CSV_PATH = r"C:/Users/d0c00v5/Downloads/Tiendas.csv"
 OUT_PATH = r"C:/Users/d0c00v5/Documents/puppy_workspace/reportes-ipas-ca/index.html"
-SEMANA = "19"
+SEMANA = "20"
 MES_TFI = "6"
 MES_NOMBRE = "Junio"
 
