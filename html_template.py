@@ -1,10 +1,8 @@
 """Plantilla HTML del reporte de Protección de Activos CA.
 
 Se separa de generate.py para mantener archivos pequeños y legibles.
+La semana y el mes los inyecta generate.py (una sola fuente de verdad).
 """
-
-MES_NOMBRE = "Junio"
-SEMANA = "20"
 
 
 def _money(v):
@@ -13,7 +11,10 @@ def _money(v):
 
 def build_html(n_total, n_logro, n_fuera, alta, alta_ly, w, m,
                logro_rows, fuera_rows, c_logro, c_fuera,
-               fmt_order, fmt_agg, pais_order, pais_agg):
+               fmt_order, fmt_agg, pais_order, pais_agg,
+               semana, mes_nombre):
+    SEMANA = semana
+    MES_NOMBRE = mes_nombre
     pct_logro = n_logro / n_total * 100
     pct_fuera = n_fuera / n_total * 100
     delta_tam = alta - alta_ly
@@ -358,7 +359,7 @@ def build_html(n_total, n_logro, n_fuera, alta, alta_ly, w, m,
             data: {{
                 labels: ['Hurto', 'Faltantes', 'Merma Admin.', 'Solo PI'],
                 datasets: [{{
-                    data: [72.7, 20.1, 5.2, 2.0],
+                    data: [72.93, 21.13, 2.46, 3.48],
                     backgroundColor: ['#7f1d1d','#dc2626','#f87171','#fecaca'],
                     borderWidth: 2, borderColor: '#fff'
                 }}]
@@ -383,7 +384,7 @@ def build_html(n_total, n_logro, n_fuera, alta, alta_ly, w, m,
             data: {{
                 labels: ['Vencimiento', 'Manipulación', 'Calidad', 'Otros', 'Plagas'],
                 datasets: [{{
-                    data: [45.0, 30.0, 5.9, 11.2, 7.9],
+                    data: [45.64, 25.46, 12.12, 10.11, 6.68],
                     backgroundColor: ['#7c2d12','#ea580c','#fb923c','#fed7aa','#fef3c7'],
                     borderWidth: 2, borderColor: '#fff'
                 }}]

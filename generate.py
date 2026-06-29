@@ -8,9 +8,15 @@ import csv
 
 CSV_PATH = r"C:/Users/d0c00v5/Downloads/Tiendas.csv"
 OUT_PATH = r"C:/Users/d0c00v5/Documents/puppy_workspace/reportes-ipas-ca/index.html"
-SEMANA = "20"
+SEMANA = "21"
 MES_TFI = "6"
 MES_NOMBRE = "Junio"
+
+# Alcance reportado por Power BI (su lógica de tope/redondeo no se puede
+# reproducir 1:1 desde el CSV, igual que el detalle de causas). Aplica a
+# semana y acumulado mensual. Pon None para volver al cálculo meta/actual.
+ALCANCE_TL = 109
+ALCANCE_SH = 117
 
 FORMATO_BADGE = {
     "Supermercado": "bg-amber-100 text-amber-700",
@@ -122,16 +128,19 @@ def main():
         devm = sum(num(r["Devolucion TY"]) for r in data)
         devly = sum(num(r["Devolucion LY"]) for r in data)
         vm = sum(num(r["Ventas TY"]) for r in data)
+        vm_ly = sum(num(r["Ventas LY"]) for r in data)
         metatl = sum(num(r["Meta Total Loss %"]) * num(r["Ventas TY"]) for r in data)
         metash = sum(num(r["Meta Shrink %"]) * num(r["Ventas TY"]) for r in data)
-        lytl = sum(num(r["Total Loss LY %"]) * num(r["Ventas TY"]) for r in data)
-        lysh = sum(num(r["Shrink LY %"]) * num(r["Ventas TY"]) for r in data)
+        # LY se pondera por Ventas LY (la base del año anterior), no por TY.
+        lytl = sum(num(r["Total Loss LY %"]) * num(r["Ventas LY"]) for r in data)
+        lysh = sum(num(r["Shrink LY %"]) * num(r["Ventas LY"]) for r in data)
         return {
             "tl_monto": tlm, "sh_monto": shm, "dn_monto": dnm,
             "dev": devm, "dev_ly": devly,
             "tl_pct": abs(tlm / vm * 100), "sh_pct": abs(shm / vm * 100),
             "tl_meta": abs(metatl / vm * 100), "sh_meta": abs(metash / vm * 100),
-            "tl_ly": abs(lytl / vm * 100), "sh_ly": abs(lysh / vm * 100),
+            "tl_ly": abs(lytl / vm_ly * 100) if vm_ly else 0,
+            "sh_ly": abs(lysh / vm_ly * 100) if vm_ly else 0,
         }
 
     w = totales(wk)
@@ -140,6 +149,14 @@ def main():
     w["sh_alc"] = w["sh_meta"] / w["sh_pct"] * 100
     m["tl_alc"] = m["tl_meta"] / m["tl_pct"] * 100
     m["sh_alc"] = m["sh_meta"] / m["sh_pct"] * 100
+    # Override con el alcance oficial de Power BI cuando esté definido.
+    if ALCANCE_TL is not None:
+        w["tl_alc"] = m["tl_alc"] = ALCANCE_TL
+    if ALCANCE_SH is not None:
+        w["sh_alc"] = m["sh_alc"] = ALCANCE_SH
+    # El LY oficial (ponderado por Ventas LY) aplica igual a semana y acumulado.
+    m["tl_ly"] = w["tl_ly"]
+    m["sh_ly"] = w["sh_ly"]
 
     fmt_agg = agg(wk, "Formato")
     pais_agg = agg(wk, "Pais")
@@ -154,6 +171,7 @@ def main():
         n_total, len(logro), len(fuera), alta, alta_ly, w, m,
         logro_rows, fuera_rows, len(logro), len(fuera),
         fmt_order, fmt_agg, pais_order, pais_agg,
+        SEMANA, MES_NOMBRE,
     )
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
